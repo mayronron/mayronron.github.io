@@ -6,10 +6,11 @@ var lastscreenshot=61; // last screenshot never taken
 
 function preload() {
 // preload() runs once, it may make you wait
-  img = loadImage('https://mayronron.github.io/images/tree.png');  // cat.jpg needs to be next to this .js file
+  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  //img = loadImage('https://dma-git.github.io/images/74.png');
+  img = loadImage('tree.png');
 }
+
 function setup() {
 createCanvas(600, 600);  // canvas size
 background(screenbg);   // use our background screen color
@@ -66,7 +67,7 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     rect(mouseX - 25,mouseY-  25, 25, 25);
     rect(mouseX + 25,mouseY - 25, 25, 25);
     
-  } else if (key == '5') { // this tool calls a function
+  } else if (toolChoice == '5') { // this tool calls a function
   
     noStroke(); // grass brush
     fill(70, 180, 60);
