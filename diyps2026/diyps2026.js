@@ -129,14 +129,48 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
    
   } else if (toolChoice == '9') {
 
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 60, 40);
+    noStroke(); //STEVEEEEEEEEE
+    fill(150, 105, 65); //head
+    rect(mouseX - 25, mouseY - 65, 50, 50);
+    fill(45, 30, 20); //hair
+    rect(mouseX - 25, mouseY - 65, 50, 12);
+    rect(mouseX - 25, mouseY - 53, 10, 12);
+    rect(mouseX + 15, mouseY - 53, 10, 12);
+    fill(255); //eyes
+    rect(mouseX - 17, mouseY - 43, 10, 7);
+    rect(mouseX + 7, mouseY - 43, 10, 7);
+    fill(30, 100, 180);
+    rect(mouseX - 12, mouseY - 43, 5, 7);
+    rect(mouseX + 7, mouseY - 43, 5, 7);
+    fill(190, 130, 90); //nose
+    rect(mouseX - 5, mouseY - 35, 10, 10);
+    fill(65, 40, 30); //mouth
+    rect(mouseX - 12, mouseY - 27, 24, 8);
+    rect(mouseX - 18, mouseY - 35, 6, 12);
+    rect(mouseX + 12, mouseY - 35, 6, 12);
+    fill(40, 100, 190); //blue shirt
+    rect(mouseX - 30, mouseY - 15, 60, 55);
+    fill(150, 105, 65); //arms
+    rect(mouseX - 45, mouseY - 15, 15, 50);
+    rect(mouseX + 30, mouseY - 15, 15, 50);
+    fill(40, 45, 110); //pants
+    rect(mouseX - 30, mouseY + 40, 60, 35);
     
   } else if (toolChoice == '0') {
     
-    stroke(0, 0);
-    fill(random(255), random(255), random(255), random(255));
-    rect(mouseX, mouseY, 200, 150);
+      noStroke(); //grass block
+    fill(95, 170, 55); //top grass
+    rect(mouseX - 25, mouseY - 25, 50, 15);
+    fill(130, 85, 45); // brown dirt block
+    rect(mouseX - 25, mouseY - 10, 50, 35);
+    fill(65, 135, 40); //grass pixel
+    rect(mouseX - 15, mouseY - 25, 10, 8);
+    rect(mouseX + 10, mouseY - 25, 12, 8);
+    fill(95, 55, 30); // darkgreen pixel
+    rect(mouseX - 15, mouseY, 8, 8);
+    rect(mouseX + 8, mouseY + 12, 10, 8);
+    rect(mouseX - 20, mouseY + 20, 8, 8);
+   
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX, mouseY, 300, 300);
     
