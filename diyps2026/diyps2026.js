@@ -6,11 +6,12 @@ var lastscreenshot=61; // last screenshot never taken
 
 function preload() {
 // preload() runs once, it may make you wait
-  //img = loadImage('https://mayronron.github.io/images/tree.png');  // cat.jpg needs to be next to this .js file
+  img = loadImage('https://mayronron.github.io/images/tree.png');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   //img = loadImage('https://dma-git.github.io/images/74.png');
 }
-
+<iframe src="https://mayronron.github.io/diyps2026/index.html" height="606" width="606" title="miencraftbrush">\
+</iframe>
 function setup() {
 createCanvas(600, 600);  // canvas size
 background(screenbg);   // use our background screen color
