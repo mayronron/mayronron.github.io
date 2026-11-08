@@ -10,7 +10,7 @@ function preload() {
 // you can link to an image on your github account
   //img = loadImage('https://dma-git.github.io/images/74.png');
 }
-<iframe src="https://mayronron.github.io/diyps2026/index.html" height="606" width="606" title="miencraftbrush">\
+<iframe src="diyps2026/index.html" height="606" width="606" title="miencraftbrush">\
 </iframe>
 function setup() {
 createCanvas(600, 600);  // canvas size
