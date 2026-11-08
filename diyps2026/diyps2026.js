@@ -10,7 +10,6 @@ function preload() {
 // you can link to an image on your github account
   //img = loadImage('https://dma-git.github.io/images/74.png');
 }
-
 function setup() {
 createCanvas(600, 600);  // canvas size
 background(screenbg);   // use our background screen color
