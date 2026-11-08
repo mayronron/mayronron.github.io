@@ -1,0 +1,175 @@
+var img;
+var initials ='mc'; // your initials
+var choice = '1'; // starting choice, so it is not empty
+var screenbg = 250; // off white background
+var lastscreenshot=61; // last screenshot never taken
+
+function preload() {
+// preload() runs once, it may make you wait
+  img = loadImage('tree.png');  // cat.jpg needs to be next to this .js file
+// you can link to an image on your github account
+  //img = loadImage('https://dma-git.github.io/images/74.png');
+}
+
+function setup() {
+createCanvas(600, 600);  // canvas size
+background(screenbg);   // use our background screen color
+
+}
+
+function draw() {
+  if (keyIsPressed) {
+    choice = key; // set choice to the key that was pressed
+    clear_print(); // check to see if it is clear screen or save image
+  }
+  if (mouseIsPressed){
+    newkeyChoice(choice);  // if the mouse is pressed call newkeyChoice
+  }
+}
+
+function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
+  // the key mapping if statements that you can change to do anything you want.
+  // just make sure each key option has the a stroke or fill and then what type of 
+  // graphic function
+
+ if (toolChoice == '1' ) {  // first tool
+   
+    strokeWeight(100); 
+    stroke('blue'); // adds blue sky
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    
+  } else if (toolChoice == '2') { // second tool
+
+    strokeWeight(100);
+    stroke('green'); // adds grass
+    line(mouseX, mouseY, pmouseX, pmouseY);
+ 
+  } else if (toolChoice == '3') { // third tool
+  
+    noStroke(); // cloud brush
+    rectMode(CENTER);
+    fill(200); 
+    rect(mouseX+10, mouseY+9, 40, 30); // adds shadow to the bottom of the cloud
+    fill(255);
+    rect(mouseX, mouseY, 80, 30); // adds the white part of cloud
+    rect(mouseX, mouseY, 40, 40);
+
+  } else if (toolChoice == '4') {
+    
+    noStroke(); //bee brush
+    rectMode(CENTER);
+    fill(255,210,0); //yellow body for bee
+    rect(mouseX,mouseY,70,50);
+    fill(40); // black strips for bee
+    rect(mouseX-20,mouseY,12,50);
+    rect(mouseX+20,mouseY,12,50);
+    fill(220, 240, 255); //wings for bee
+    rect(mouseX-25,mouseY-25, 25, 25);
+    rect(mouseX+25,mouseY-25, 25, 25);
+    
+  } else if (key == '5') { // this tool calls a function
+  
+    noStroke(); //grass brush
+    fill(70, 180, 60);
+    rectMode(CENTER);
+    rect(mouseX-20,mouseY, 8, 35);
+    rect(mouseX-8,mouseY-8, 8, 50);
+    rect(mouseX+5,mouseY,8, 35);
+    rect(mouseX+18,mouseY-10, 8, 55);
+    rect(mouseX+30,mouseY, 8, 35);
+ 
+ // make testbox do something!
+ //   line(mouseX, mouseY, pmouseX, pmouseY);
+  } else if (toolChoice == '6') {
+    noStroke();
+    rectMode(CENTER);    
+    fill(41, 32, 23); //legs
+    rect(mouseX - 27.5, mouseY + 37.5, 15, 40);
+    rect(mouseX + 2.5, mouseY + 37.5, 15, 40);
+    rect(mouseX + 32.5, mouseY + 37.5, 15, 40);    
+    fill(14, 12, 12); //feet
+    rect(mouseX - 27.5, mouseY + 55, 17.5, 7.5);
+    rect(mouseX + 2.5, mouseY + 55, 17.5, 7.5);
+    rect(mouseX + 32.5, mouseY + 55, 17.5, 7.5);    
+    fill(41, 32, 23); //body
+    rect(mouseX + 10, mouseY, 110, 60);    
+    fill(179, 179, 179);   // body circles
+    ellipse(mouseX - 7.5, mouseY - 12.5, 27.5, 22.5);
+    ellipse(mouseX + 27.5, mouseY + 12.5, 35, 15);
+    ellipse(mouseX + 47.5, mouseY - 17.5, 17.5, 7.5);    
+    fill(41, 32, 23); //head
+    rect(mouseX - 57.5, mouseY - 2.5, 50, 50);    
+    fill(179, 179, 179); //head patch
+    rect(mouseX - 70, mouseY - 10, 17.5, 17.5);    
+    fill(41, 32, 23); //ears
+    rect(mouseX - 80, mouseY - 27.5, 17.5, 12.5);
+    rect(mouseX - 35, mouseY - 27.5, 17.5, 12.5);  
+    fill(161, 161, 161); //horns
+    rect(mouseX - 70, mouseY - 37.5, 7.5, 12.5);
+    rect(mouseX - 45, mouseY - 37.5, 7.5, 12.5);
+    fill(14, 12, 12); //eyes
+    rect(mouseX - 67.5, mouseY - 5, 6, 6);
+    rect(mouseX - 47.5, mouseY - 5, 6, 6);    
+    fill(143, 143, 143); //muzzle
+    rect(mouseX - 57.5, mouseY + 12.5, 30, 15);    
+    fill(14, 12, 12);  // Nostrils
+    rect(mouseX - 65, mouseY + 12.5, 4, 4);
+    
+  } else if (toolChoice == '7') {
+
+    strokeWeight(100); // night time brush
+    stroke('black'); // adds blue sky
+     line(mouseX, mouseY, pmouseX, pmouseY);
+    
+  } else if (toolChoice == '8') {
+    
+   fill(255); //white stars for sky
+   noStroke();
+   ellipse(mouseX + random(-10, 50), mouseY + random(-10, 50), 5, 5); // using random integers to randomize the placement of the stars to add a sprinkle effect
+   
+  } else if (toolChoice == '9') {
+
+    fill(300, 100, 0, 80);
+    rect(mouseX, mouseY, 60, 40);
+    
+  } else if (toolChoice == '0') {
+    
+    stroke(0, 0);
+    fill(random(255), random(255), random(255), random(255));
+    rect(mouseX, mouseY, 200, 150);
+  } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
+    image(img, mouseX, mouseY, 300, 300);
+    
+  }
+ }
+ 
+function testbox(r, g, b) {
+// this is a test function that will show you how you can put your own functions into the sketch
+  x = mouseX;
+  y = mouseY;
+  fill(r, g, b);
+  rect(x-50, y-50, 100, 100);
+
+}
+
+function clear_print() {
+// this will do one of two things, x clears the screen by resetting the background
+// p calls the routine saveme, which saves a copy of the screen
+  if (key == 'x' || key == 'X') {
+    background(screenbg); // set the screen back to the background color
+  } else if (key == 'p' || key == 'P') {
+     saveme();  // call saveme which saves an image of the screen
+  }
+}
+
+function saveme(){
+    //this will save the name as the intials, date, time and a millis counting number.
+    // it will always be larger in value then the last one.
+  filename=initials+day() + hour() + minute() +second();
+  if (second()!=lastscreenshot) { // don't take a screenshot if you just took one
+    saveCanvas(filename, 'jpg');
+    key="";
+  }
+  lastscreenshot=second(); // set this to the current second so no more than one per second
+  
+}
