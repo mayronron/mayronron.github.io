@@ -307,7 +307,7 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   } else if (toolChoice == '2') { // second tool
 
     strokeWeight(100);
-    stroke('green'); // adds grass
+    stroke('green'); // adds green farmland
     line(mouseX, mouseY, pmouseX, pmouseY);
  
   } else if (toolChoice == '3') { // third tool
@@ -322,20 +322,20 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
 
   } else if (toolChoice == '4') {
     
-    noStroke(); //bee brush
+    noStroke(); // bee brush
     rectMode(CENTER);
-    fill(255,210,0); //yellow body for bee
+    fill(255,210,0); // yellow body for bee
     rect(mouseX,mouseY,70,50);
     fill(40); // black strips for bee
     rect(mouseX - 20,mouseY,12,50);
     rect(mouseX + 20,mouseY,12,50);
-    fill(220, 240, 255); //wings for bee
+    fill(220, 240, 255); // wings for bee
     rect(mouseX - 25,mouseY-  25, 25, 25);
     rect(mouseX + 25,mouseY - 25, 25, 25);
     
   } else if (key == '5') { // this tool calls a function
   
-    noStroke(); //grass brush
+    noStroke(); // grass brush
     fill(70, 180, 60);
     rectMode(CENTER);
     rect(mouseX-20,mouseY, 8, 35);
@@ -347,17 +347,17 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '6') {
-    noStroke();
+    noStroke(); // cow brush
     rectMode(CENTER);    
-    fill(41, 32, 23); //legs
+    fill(41, 32, 23); // legs
     rect(mouseX - 27.5, mouseY + 37.5, 15, 40);
     rect(mouseX + 2.5, mouseY + 37.5, 15, 40);
     rect(mouseX + 32.5, mouseY + 37.5, 15, 40);    
-    fill(14, 12, 12); //feet
+    fill(14, 12, 12); // feet
     rect(mouseX - 27.5, mouseY + 55, 17.5, 7.5);
     rect(mouseX + 2.5, mouseY + 55, 17.5, 7.5);
     rect(mouseX + 32.5, mouseY + 55, 17.5, 7.5);    
-    fill(41, 32, 23); //body
+    fill(41, 32, 23); // body
     rect(mouseX + 10, mouseY, 110, 60);    
     fill(179, 179, 179);   // body circles
     ellipse(mouseX - 7.5, mouseY - 12.5, 27.5, 22.5);
@@ -365,20 +365,20 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     ellipse(mouseX + 47.5, mouseY - 17.5, 17.5, 7.5);    
     fill(41, 32, 23); //head
     rect(mouseX - 57.5, mouseY - 2.5, 50, 50);    
-    fill(179, 179, 179); //head patch
+    fill(179, 179, 179); // head patch
     rect(mouseX - 70, mouseY - 10, 17.5, 17.5);    
-    fill(41, 32, 23); //ears
+    fill(41, 32, 23); // ears
     rect(mouseX - 80, mouseY - 27.5, 17.5, 12.5);
     rect(mouseX - 35, mouseY - 27.5, 17.5, 12.5);  
-    fill(161, 161, 161); //horns
+    fill(161, 161, 161); // horns
     rect(mouseX - 70, mouseY - 37.5, 7.5, 12.5);
     rect(mouseX - 45, mouseY - 37.5, 7.5, 12.5);
-    fill(14, 12, 12); //eyes
+    fill(14, 12, 12); // eyes
     rect(mouseX - 67.5, mouseY - 5, 6, 6);
     rect(mouseX - 47.5, mouseY - 5, 6, 6);    
-    fill(143, 143, 143); //muzzle
+    fill(143, 143, 143); // muzzle
     rect(mouseX - 57.5, mouseY + 12.5, 30, 15);    
-    fill(14, 12, 12);  // Nostrils
+    fill(14, 12, 12);  //  nostrills
     rect(mouseX - 65, mouseY + 12.5, 4, 4);
     
   } else if (toolChoice == '7') {
@@ -443,14 +443,6 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   }
  }
  
-function testbox(r, g, b) {
-// this is a test function that will show you how you can put your own functions into the sketch
-  x = mouseX;
-  y = mouseY;
-  fill(r, g, b);
-  rect(x-50, y-50, 100, 100);
-
-}
 
 function clear_print() {
 // this will do one of two things, x clears the screen by resetting the background
@@ -473,7 +465,6 @@ function saveme(){
   lastscreenshot=second(); // set this to the current second so no more than one per second
   
 }
-</pre>
 </pre>
 </div>
 </body>

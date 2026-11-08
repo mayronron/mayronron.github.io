@@ -6,7 +6,7 @@ var lastscreenshot=61; // last screenshot never taken
 
 function preload() {
 // preload() runs once, it may make you wait
-  img = loadImage('tree.png');  // cat.jpg needs to be next to this .js file
+  //img = loadImage('https://mayronron.github.io/images/tree.png');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   //img = loadImage('https://dma-git.github.io/images/74.png');
 }
@@ -41,7 +41,7 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   } else if (toolChoice == '2') { // second tool
 
     strokeWeight(100);
-    stroke('green'); // adds grass
+    stroke('green'); // adds green farmland
     line(mouseX, mouseY, pmouseX, pmouseY);
  
   } else if (toolChoice == '3') { // third tool
@@ -49,27 +49,27 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     noStroke(); // cloud brush
     rectMode(CENTER);
     fill(200); 
-    rect(mouseX+10, mouseY+9, 40, 30); // adds shadow to the bottom of the cloud
+    rect(mouseX + 10, mouseY + 9, 40, 30); // adds shadow to the bottom of the cloud
     fill(255);
     rect(mouseX, mouseY, 80, 30); // adds the white part of cloud
     rect(mouseX, mouseY, 40, 40);
 
   } else if (toolChoice == '4') {
     
-    noStroke(); //bee brush
+    noStroke(); // bee brush
     rectMode(CENTER);
-    fill(255,210,0); //yellow body for bee
+    fill(255,210,0); // yellow body for bee
     rect(mouseX,mouseY,70,50);
     fill(40); // black strips for bee
-    rect(mouseX-20,mouseY,12,50);
-    rect(mouseX+20,mouseY,12,50);
-    fill(220, 240, 255); //wings for bee
-    rect(mouseX-25,mouseY-25, 25, 25);
-    rect(mouseX+25,mouseY-25, 25, 25);
+    rect(mouseX - 20,mouseY,12,50);
+    rect(mouseX + 20,mouseY,12,50);
+    fill(220, 240, 255); // wings for bee
+    rect(mouseX - 25,mouseY-  25, 25, 25);
+    rect(mouseX + 25,mouseY - 25, 25, 25);
     
   } else if (key == '5') { // this tool calls a function
   
-    noStroke(); //grass brush
+    noStroke(); // grass brush
     fill(70, 180, 60);
     rectMode(CENTER);
     rect(mouseX-20,mouseY, 8, 35);
@@ -81,17 +81,17 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '6') {
-    noStroke();
+    noStroke(); // cow brush
     rectMode(CENTER);    
-    fill(41, 32, 23); //legs
+    fill(41, 32, 23); // legs
     rect(mouseX - 27.5, mouseY + 37.5, 15, 40);
     rect(mouseX + 2.5, mouseY + 37.5, 15, 40);
     rect(mouseX + 32.5, mouseY + 37.5, 15, 40);    
-    fill(14, 12, 12); //feet
+    fill(14, 12, 12); // feet
     rect(mouseX - 27.5, mouseY + 55, 17.5, 7.5);
     rect(mouseX + 2.5, mouseY + 55, 17.5, 7.5);
     rect(mouseX + 32.5, mouseY + 55, 17.5, 7.5);    
-    fill(41, 32, 23); //body
+    fill(41, 32, 23); // body
     rect(mouseX + 10, mouseY, 110, 60);    
     fill(179, 179, 179);   // body circles
     ellipse(mouseX - 7.5, mouseY - 12.5, 27.5, 22.5);
@@ -99,26 +99,26 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     ellipse(mouseX + 47.5, mouseY - 17.5, 17.5, 7.5);    
     fill(41, 32, 23); //head
     rect(mouseX - 57.5, mouseY - 2.5, 50, 50);    
-    fill(179, 179, 179); //head patch
+    fill(179, 179, 179); // head patch
     rect(mouseX - 70, mouseY - 10, 17.5, 17.5);    
-    fill(41, 32, 23); //ears
+    fill(41, 32, 23); // ears
     rect(mouseX - 80, mouseY - 27.5, 17.5, 12.5);
     rect(mouseX - 35, mouseY - 27.5, 17.5, 12.5);  
-    fill(161, 161, 161); //horns
+    fill(161, 161, 161); // horns
     rect(mouseX - 70, mouseY - 37.5, 7.5, 12.5);
     rect(mouseX - 45, mouseY - 37.5, 7.5, 12.5);
-    fill(14, 12, 12); //eyes
+    fill(14, 12, 12); // eyes
     rect(mouseX - 67.5, mouseY - 5, 6, 6);
     rect(mouseX - 47.5, mouseY - 5, 6, 6);    
-    fill(143, 143, 143); //muzzle
+    fill(143, 143, 143); // muzzle
     rect(mouseX - 57.5, mouseY + 12.5, 30, 15);    
-    fill(14, 12, 12);  // Nostrils
+    fill(14, 12, 12);  //  nostrills
     rect(mouseX - 65, mouseY + 12.5, 4, 4);
     
   } else if (toolChoice == '7') {
 
     strokeWeight(100); // night time brush
-    stroke('black'); // adds blue sky
+    stroke('black'); // adds black sky
      line(mouseX, mouseY, pmouseX, pmouseY);
     
   } else if (toolChoice == '8') {
@@ -128,15 +128,49 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
    ellipse(mouseX + random(-10, 50), mouseY + random(-10, 50), 5, 5); // using random integers to randomize the placement of the stars to add a sprinkle effect
    
   } else if (toolChoice == '9') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 60, 40);
     
+    noStroke(); //STEVEEEEEEEEE
+    fill(150, 105, 65); //head
+    rect(mouseX - 25, mouseY - 65, 50, 50);
+    fill(45, 30, 20); //hair
+    rect(mouseX - 25, mouseY - 65, 50, 12);
+    rect(mouseX - 25, mouseY - 53, 10, 12);
+    rect(mouseX + 15, mouseY - 53, 10, 12);
+    fill(255); //eyes
+    rect(mouseX - 17, mouseY - 43, 10, 7);
+    rect(mouseX + 7, mouseY - 43, 10, 7);
+    fill(30, 100, 180);
+    rect(mouseX - 12, mouseY - 43, 5, 7);
+    rect(mouseX + 7, mouseY - 43, 5, 7);
+    fill(190, 130, 90); //nose
+    rect(mouseX - 5, mouseY - 35, 10, 10);
+    fill(65, 40, 30); //mouth
+    rect(mouseX - 12, mouseY - 27, 24, 8);
+    rect(mouseX - 18, mouseY - 35, 6, 12);
+    rect(mouseX + 12, mouseY - 35, 6, 12);
+    fill(40, 100, 190); //blue shirt
+    rect(mouseX - 30, mouseY - 15, 60, 55);
+    fill(150, 105, 65); //arms
+    rect(mouseX - 45, mouseY - 15, 15, 50);
+    rect(mouseX + 30, mouseY - 15, 15, 50);
+    fill(40, 45, 110); //pants
+    rect(mouseX - 30, mouseY + 40, 60, 35);
+   
   } else if (toolChoice == '0') {
+     
+    noStroke(); //grass block
+    fill(95, 170, 55); //top grass
+    rect(mouseX - 25, mouseY - 25, 50, 15);
+    fill(130, 85, 45); // brown dirt block
+    rect(mouseX - 25, mouseY - 10, 50, 35);
+    fill(65, 135, 40); //grass pixel
+    rect(mouseX - 15, mouseY - 25, 10, 8);
+    rect(mouseX + 10, mouseY - 25, 12, 8);
+    fill(95, 55, 30); // darkgreen pixel
+    rect(mouseX - 15, mouseY, 8, 8);
+    rect(mouseX + 8, mouseY + 12, 10, 8);
+    rect(mouseX - 20, mouseY + 20, 8, 8);
     
-    stroke(0, 0);
-    fill(random(255), random(255), random(255), random(255));
-    rect(mouseX, mouseY, 200, 150);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX, mouseY, 300, 300);
     
