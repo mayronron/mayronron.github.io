@@ -3,7 +3,7 @@ var initials ='mc'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
 var lastscreenshot=61; // last screenshot never taken
-<iframe src="diyps2026/index.html" height="606" width="606" title="miencraftbrush">
+<iframe src="https://mayronron.github.io/diyps2026/index.html" height="606" width="606" title="miencraftbrush">
 </iframe>
 function preload() {
 // preload() runs once, it may make you wait
